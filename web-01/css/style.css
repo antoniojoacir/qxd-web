@@ -1,0 +1,46 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	text-align: center;
+	color: lightgoldenrodyellow;
+	background-color: deepskyblue;
+}
+
+p {
+	color: royalblue;
+	background-color: white;
+}
+
+.citacao {
+	color: black;
+	background: white;
+}
+
+.container-imagem-texto {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.container-imagem-texto img {
+	width: 400px;
+	height: auto;
+	border-radius: 8px;
+}
+
+.texto {
+	flex: 1;
+}
+
+pre {
+	background-color: limegreen;
+	color: black;
+}
+
+address {
+	color: white;
+	text-align: justify;
+}
