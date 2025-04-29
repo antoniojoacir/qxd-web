@@ -1,0 +1,60 @@
+
+* {
+    background-color: black;
+    color: aliceblue;
+}
+
+.cabeca {
+    justify-content: center;
+}
+ul {
+    position: sticky;
+    top: 0;
+    list-style-type: none;
+    margin: 5px 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #98AFC7;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover {
+    background-color: #778899;
+}
+.flex-container {
+    display: flex;
+}
+
+.myimg {
+    float: left;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.mycontente p {
+    display: block;
+    text-align: justify;
+    margin: 0;
+    width: 95%;
+    background-color: #686A6C;
+}
+
+aside p {
+    margin-top: 0;
+    margin-left: 0;
+    width: 98%;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+}
