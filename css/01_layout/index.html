@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="tema" rel="stylesheet" href="css/style-01.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplos layout</h1>
+    <h1>LAYOUT <span id="numero"></span></h1>
+    <button onclick="layout_change_01()">LAYOUT 1</button> <button onclick="layout_change_02()">LAYOUT 2</button>
+    <button onclick="toggle()">Toggle</button>
+    <button onclick="circular()">Circular</button>
+    <p id="p-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, tempora ullam fugit ipsam quod debitis dolorem magni quaerat laborum non sint unde quae qui explicabo natus recusandae aliquam molestiae dolores?</p>
+    <p id="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde assumenda neque fuga velit cumque quibusdam excepturi qui? Esse incidunt facere officia necessitatibus, fugit, magni dignissimos quod labore omnis hic nam.</p>
+    <p id="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut explicabo voluptates quasi enim aperiam, qui itaque? Obcaecati magnam cum sint tenetur eaque, commodi quia alias nobis. Architecto cupiditate corporis ducimus.</p>
+    <p id="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum alias deserunt delectus! Assumenda provident sed repudiandae similique nisi veniam accusantium voluptatem minus iure quos labore odio ratione voluptates, sapiente officiis.</p>
+    <script>
+        let index = 0;
+        function layout_change_01() {
+            let link = document.getElementById("tema")
+            link.href = `css/style-0${1}.css`
+            document.getElementById("numero").innerHTML = (index +1)
+        }
+
+        function layout_change_02() {
+            let link = document.getElementById("tema")
+            link.href = `css/style-0${2}.css`
+            document.getElementById("numero").innerHTML = (index +2)
+        }
+
+        let flag_layout = true;
+        function toggle() {
+            let link = document.getElementById("tema")
+            if (flag_layout){
+                link.href = `css/style-0${1}.css`
+                document.getElementById("numero").innerHTML = (index +1)
+            }
+            else{
+                link.href = `css/style-0${2}.css`
+                document.getElementById("numero").innerHTML = (index +2)
+            }
+            flag_layout = !flag_layout
+        }
+        
+        function circular() {
+            let link = document.getElementById("tema");
+            link.href = `css/style-0${index+1}.css`
+            document.getElementById("numero").innerHTML = (index +1)
+            index = (index + 1) % 4
+        }
+    </script>
+</body>
+</html>
