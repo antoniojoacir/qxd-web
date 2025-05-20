@@ -2,188 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_dark.css">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link id="tema" rel="stylesheet" href="css/style_light.css">
+	<title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>
-            Hunter x Hunter
-        </h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#theme" class="right">Theme</a>
-    </nav>
-    <aside>
-        <h4 class="asidecenter">
-            <b>
-                Hunter × Hunter
-            </b>
-        </h4>
-        <div class="image">
-            <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Hunter_%C3%97_Hunter_vol._1.png"
-                alt="Hunter x Hunter">
-            <p>
-                First <i> tankōbon</i> volume cover, featuring Gon Freecss above a large frog
-            </p>
-        </div>
+	<script>
+		let flag_layout = true;
+		function toggle() {
+			let link = document.getElementById("tema")
+			if (flag_layout) {
+				link.href = `css/style_light.css`
+			}
+			else {
+				link.href = `css/style_dark.css`
+			}
+			flag_layout = !flag_layout
+		}	
+	</script>
+	<header>
+		<h1>
+			Hunter x Hunter
+		</h1>
+	</header>
+	<nav>
+			<a href="#home">Home</a>
+			<a href="#news">News</a>
+			<a href="#contact">Contact</a>
+			<a href="#about">About</a>
+			<button onclick="toggle()">Theme</button>
+	</nav>
+	<aside>
+		<h4 class="asidecenter">
+			<b>
+				Hunter × Hunter
+			</b>
+		</h4>
+		<div class="image">
+			<img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Hunter_%C3%97_Hunter_vol._1.png" alt="Hunter x Hunter">
+			<p>
+				First <i>tankōbon</i> volume cover, featuring Gon Freecss above a large frog
+			</p>
+		</div>
 
-        <p class="asidecenter">
-            <b>
-                Main characters
-            </b>
-        </p>
-        <h4>
-            Gon Freecss
-        </h4>
-        <div class="image">
-            <img src="https://www.giantbomb.com/a/uploads/scale_medium/2/27436/2722697-gon_freecss_2617.jpg"
-                alt="Gon Freecss">
-        </div>
-        <h4>
-            Killua Zoldyck
-        </h4>
-        <div class="image">
-            <img src="https://static.wikia.nocookie.net/hunterxhunter/images/b/bd/HxH2011_EP147_Killua_Portrait.png"
-                alt="Killua">
-        </div>
-        <h4>
-            Kurapika
-        </h4>
-        <div class="image">
-            <img src="https://static.wikia.nocookie.net/hunterxhunter/images/8/8e/Kurapika_portrait_HXH_1999_EP69.png"
-                alt="Kurapika">
-        </div>
-        <h4>
-            Leorio Paradinight
-        </h4>
-        <div class="image">
-            <img src="https://static.wikia.nocookie.net/hunterxhunter/images/8/87/Leorio_85.png"
-                alt="Leorio Paradinight">
-        </div>
-    </aside>
-    <section>
-        <p>
-            Hunter × Hunter (pronounced "hunter hunter"[4]) is a Japanese manga series written and illustrated by
-            Yoshihiro Togashi. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March
-            1998, although the manga has frequently gone on extended hiatuses since 2006. Its chapters have been
-            collected in 38 tankōbon volumes as of September 2024. The story focuses on a young boy named Gon Freecss
-            who discovers that his father, who left him at a young age, is actually a world-renowned Hunter, a licensed
-            professional who specializes in fantastical pursuits such as locating rare or unidentified animal species,
-            treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Gon departs on a
-            journey to become a Hunter and eventually find his father. Along the way, Gon meets various other Hunters
-            and encounters the paranormal.
-        </p>
-        <p>
-            Hunter × Hunter was adapted into a 62-episode anime television series by Nippon Animation and directed by
-            Kazuhiro Furuhashi, which ran on Fuji Television from October 1999 to March 2001. Three separate original
-            video animations (OVAs) totaling 30 episodes were subsequently produced by Nippon Animation and released in
-            Japan from 2002 to 2004. A second anime television series by Madhouse aired on Nippon Television from
-            October 2011 to September 2014, totaling 148 episodes, with two animated theatrical films released in 2013.
-            There are also numerous audio albums, video games, musicals, and other media based on Hunter × Hunter.
-        </p>
-        <p>
-            The manga has been licensed for English release in North America by Viz Media since April 2005. Both
-            television series have been also licensed by Viz Media, with the first series having aired on the Funimation
-            Channel in 2009 and the second series broadcast on Adult Swim's Toonami programming block from April 2016 to
-            June 2019.
-        </p>
-        <p>
-            Hunter × Hunter has been a huge critical and financial success and has become one of the best-selling manga
-            series of all time, having over 84 million copies in circulation by July 2022
-        </p>
-        <h1>
-            Synopsis
-        </h1>
-        <h3>
-            <b>Setting</b>
-        </h3>
-        <p>
-            Hunters (ハンター, Hantā) are licensed, elite members of humanity who are capable of tracking down secret
-            treasures, rare beasts, or even other individuals, and can also access locations that regulars cannot.[5] To
-            obtain a license one must pass the rigorous annual Hunter Examination run by the Hunter Association, which
-            has a success rate of less than one in a hundred-thousand.[6] A Hunter may be awarded up to three stars: a
-            single star for making "remarkable achievements in a particular field"; they may then be upgraded to two
-            stars for "holding an official position" and mentoring another Hunter up to single star level; and finally
-            upgraded to three stars for "remarkable achievements in multiple fields".[7]
-        </p>
-        <p>
-            Nen (念) is the ability to control one's own life energy or aura, which is constantly emitted from them,
-            knowingly or not. There are four basic Nen techniques: Ten (纏) maintains the aura in the body, strengthening
-            it for defense; Zetsu (絕) shuts the aura flow off, useful for concealing one's presence and relieving
-            fatigue; Ren (練) enables a user to produce more Nen; and Hatsu (發) is a person's specific use of Nen.[8] Nen
-            users are classified into six types based on their Hatsu abilities; Enhancers (強化系, Kyōkakei) strengthen and
-            reinforce their natural physical abilities; Emitters (放出系, Hōshutsukei) project aura out of their bodies;
-            Manipulators (操作系, Sōsakei) control objects or living things; Transmuters (変化系, Henkakei) change the type or
-            properties of their aura; Conjurers (具現化系, Gugenkakei) create objects out of their aura; and Specialists
-            (特質系, Tokushitsukei) have unique abilities that do not fall into the previous categories.[9] A Nen user can
-            enter into a Contract (誓約, Seiyaku) where, by pledging to follow certain Limitations (制約, Seiyaku), their
-            abilities are strengthened in relation to how strict they are. An example of this is Kurapika who, in order
-            to have an unbreakable chain that will fully restrain members of the Phantom Troupe, offered his life,
-            should he use it on anyone other than its members.
-        </p>
-        <h3>
-            <b>
-                Plot
-            </b>
-        </h3>
-        <p>
-            The story follows Gon Freecss, a young boy raised believing both his parents were dead. After discovering
-            from Kite, an apprentice of his father Ging Freecss, that Ging is alive and a renowned Hunter, Gon leaves
-            his home on Whale Island (くじら島, Kujira Tō) to undertake the Hunter Examination (ハンター試験, Hantā Shiken) and
-            follow in his father's footsteps.[11][12][13] During the exam, Gon befriends three other candidates:
-            Kurapika, the last survivor of the Kurta clan seeking vengeance against the Phantom Troupe for slaughtering
-            his people; Leorio, an aspiring physician pursuing the financial benefits of being a Hunter; and Killua
-            Zoldyck, a former assassin from the infamous Zoldyck family.[12][13][5] Among the examinees is Hisoka, a
-            deadly transmuter who takes a keen interest in Gon. After numerous trials, Gon and his friends pass the
-            exam, except for Killua, who fails after killing another applicant under his brother Illumi's influence and
-            retreats to his family's estate.
-        </p>
-        <p>
-            After reuniting with Killua, Gon and his companions separate temporarily. Gon and Killua travel to Heavens
-            Arena (天空闘技場, Tenkū Tōgijō), a towering martial arts arena where they train under Wing, a master who teaches
-            them Nen, a Qi-like energy that unlocks parapsychological abilities and is the Hunter Exam's true final
-            requirement.[14] Later, the group reconvenes in Yorknew City (ヨークシンシティ, Yōkushin Shiti), where they clash
-            with the Phantom Troupe. Kurapika kills two members and seals their leader Chrollo Lucilfer's powers but is
-            forced to abandon further pursuit to rescue Gon and Killua.
-        </p>
-        <p>
-            Gon and Killua later play Greed Island, a Nen-infused video game created by Ging, seeking clues to his
-            whereabouts.[15] Under the tutelage of Biscuit Krueger, they refine their Nen abilities. Killua briefly
-            departs to retake and pass the Hunter Exam before rejoining Gon to complete the game, earning artifacts that
-            lead them to Ging. Instead, they reunite with Kite, who is researching a man-eating Chimera Ant queen in the
-            Neo-Green Life (N.G.L.) Autonomous Region. The queen's offspring, having learned Nen by consuming Hunters,
-            overthrow the nearby Republic of East Gorteau (東ゴルトー共和国, Higashi Gorutō Kyouwakoku). Despite the efforts of
-            the Hunter Association, including its president Netero, the Ant King Meruem proves formidable. Netero
-            ultimately defeats Meruem with a suicide bomb, while Gon, driven by vengeance, overexerts his Nen to kill
-            the Ant Neferpitou, leaving him critically injured.
-        </p>
-        <p>
-            After the Chimera Ant crisis, the Hunter Association's Zodiacs, including Ging, seek a new chairman. Killua
-            retrieves his sister Alluka to heal Gon, overcoming his family's resistance and Illumi's interference. Gon
-            eventually meets Ging, who reveals the purpose of his journey.
-        </p>
-        <p>
-            Later, Netero's son Beyond organizes an expedition to the forbidden Dark Continent (暗黒大陸, Ankoku Tairiku),
-            backed by the Kingdom of Kakin. The world's major powers permit the expedition under strict oversight, with
-            the Zodiacs supervising Beyond. Kurapika and Leorio join the Zodiacs, replacing Ging and Pariston Hill, who
-            form independent teams. Meanwhile, Chrollo regains his Nen and battles Hisoka, who, after being revived,
-            begins assassinating Phantom Troupe members aboard Kakin's ship. Kurapika, aboard as bodyguard to Prince
-            Wobble, seeks to reclaim the Kurta clan's stolen scarlet eyes from Prince Tserriednich.
-        </p>
-    </section>
-    <footer>
-        <h1>
-            This is my footer
-        </h1>
-    </footer>
+		<p class="asidecenter">
+			<b>
+				Main characters
+			</b>
+		</p>
+		<h4>
+			Gon Freecss
+		</h4>
+		<div class="image">
+			<img src="https://www.giantbomb.com/a/uploads/scale_medium/2/27436/2722697-gon_freecss_2617.jpg"
+				alt="Gon Freecss">
+		</div>
+		<h4>
+			Killua Zoldyck
+		</h4>
+		<div class="image">
+			<img src="https://static.wikia.nocookie.net/hunterxhunter/images/b/bd/HxH2011_EP147_Killua_Portrait.png"
+				alt="Killua">
+		</div>
+		<h4>
+			Kurapika
+		</h4>
+		<div class="image">
+			<img src="https://static.wikia.nocookie.net/hunterxhunter/images/8/8e/Kurapika_portrait_HXH_1999_EP69.png"
+				alt="Kurapika">
+		</div>
+		<h4>
+			Leorio Paradinight
+		</h4>
+		<div class="image">
+			<img src="https://static.wikia.nocookie.net/hunterxhunter/images/8/87/Leorio_85.png" alt="Leorio Paradinight">
+		</div>
+	</aside>
+	<section>
+		<p>
+			Hunter × Hunter (pronounced "hunter hunter"[4]) is a Japanese manga series written and illustrated by
+			Yoshihiro Togashi. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March
+			1998, although the manga has frequently gone on extended hiatuses since 2006. Its chapters have been
+			collected in 38 tankōbon volumes as of September 2024. The story focuses on a young boy named Gon Freecss
+			who discovers that his father, who left him at a young age, is actually a world-renowned Hunter, a licensed
+			professional who specializes in fantastical pursuits such as locating rare or unidentified animal species,
+			treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Gon departs on a
+			journey to become a Hunter and eventually find his father. Along the way, Gon meets various other Hunters
+			and encounters the paranormal.
+		</p>
+		<p>
+			Hunter × Hunter was adapted into a 62-episode anime television series by Nippon Animation and directed by
+			Kazuhiro Furuhashi, which ran on Fuji Television from October 1999 to March 2001. Three separate original
+			video animations (OVAs) totaling 30 episodes were subsequently produced by Nippon Animation and released in
+			Japan from 2002 to 2004. A second anime television series by Madhouse aired on Nippon Television from
+			October 2011 to September 2014, totaling 148 episodes, with two animated theatrical films released in 2013.
+			There are also numerous audio albums, video games, musicals, and other media based on Hunter × Hunter.
+		</p>
+		<p>
+			The manga has been licensed for English release in North America by Viz Media since April 2005. Both
+			television series have been also licensed by Viz Media, with the first series having aired on the Funimation
+			Channel in 2009 and the second series broadcast on Adult Swim's Toonami programming block from April 2016 to
+			June 2019.
+		</p>
+		<p>
+			Hunter × Hunter has been a huge critical and financial success and has become one of the best-selling manga
+			series of all time, having over 84 million copies in circulation by July 2022
+		</p>
+		<h1>
+			Synopsis
+		</h1>
+		<h3>
+			<b>Setting</b>
+		</h3>
+		<p>
+			Hunters (ハンター, Hantā) are licensed, elite members of humanity who are capable of tracking down secret
+			treasures, rare beasts, or even other individuals, and can also access locations that regulars cannot.[5] To
+			obtain a license one must pass the rigorous annual Hunter Examination run by the Hunter Association, which
+			has a success rate of less than one in a hundred-thousand.[6] A Hunter may be awarded up to three stars: a
+			single star for making "remarkable achievements in a particular field"; they may then be upgraded to two
+			stars for "holding an official position" and mentoring another Hunter up to single star level; and finally
+			upgraded to three stars for "remarkable achievements in multiple fields".[7]
+		</p>
+		<p>
+			Nen (念) is the ability to control one's own life energy or aura, which is constantly emitted from them,
+			knowingly or not. There are four basic Nen techniques: Ten (纏) maintains the aura in the body, strengthening
+			it for defense; Zetsu (絕) shuts the aura flow off, useful for concealing one's presence and relieving
+			fatigue; Ren (練) enables a user to produce more Nen; and Hatsu (發) is a person's specific use of Nen.[8] Nen
+			users are classified into six types based on their Hatsu abilities; Enhancers (強化系, Kyōkakei) strengthen and
+			reinforce their natural physical abilities; Emitters (放出系, Hōshutsukei) project aura out of their bodies;
+			Manipulators (操作系, Sōsakei) control objects or living things; Transmuters (変化系, Henkakei) change the type or
+			properties of their aura; Conjurers (具現化系, Gugenkakei) create objects out of their aura; and Specialists
+			(特質系, Tokushitsukei) have unique abilities that do not fall into the previous categories.[9] A Nen user can
+			enter into a Contract (誓約, Seiyaku) where, by pledging to follow certain Limitations (制約, Seiyaku), their
+			abilities are strengthened in relation to how strict they are. An example of this is Kurapika who, in order
+			to have an unbreakable chain that will fully restrain members of the Phantom Troupe, offered his life,
+			should he use it on anyone other than its members.
+		</p>
+		<h3>
+			<b>
+				Plot
+			</b>
+		</h3>
+		<p>
+			The story follows Gon Freecss, a young boy raised believing both his parents were dead. After discovering
+			from Kite, an apprentice of his father Ging Freecss, that Ging is alive and a renowned Hunter, Gon leaves
+			his home on Whale Island (くじら島, Kujira Tō) to undertake the Hunter Examination (ハンター試験, Hantā Shiken) and
+			follow in his father's footsteps.[11][12][13] During the exam, Gon befriends three other candidates:
+			Kurapika, the last survivor of the Kurta clan seeking vengeance against the Phantom Troupe for slaughtering
+			his people; Leorio, an aspiring physician pursuing the financial benefits of being a Hunter; and Killua
+			Zoldyck, a former assassin from the infamous Zoldyck family.[12][13][5] Among the examinees is Hisoka, a
+			deadly transmuter who takes a keen interest in Gon. After numerous trials, Gon and his friends pass the
+			exam, except for Killua, who fails after killing another applicant under his brother Illumi's influence and
+			retreats to his family's estate.
+		</p>
+		<p>
+			After reuniting with Killua, Gon and his companions separate temporarily. Gon and Killua travel to Heavens
+			Arena (天空闘技場, Tenkū Tōgijō), a towering martial arts arena where they train under Wing, a master who teaches
+			them Nen, a Qi-like energy that unlocks parapsychological abilities and is the Hunter Exam's true final
+			requirement.[14] Later, the group reconvenes in Yorknew City (ヨークシンシティ, Yōkushin Shiti), where they clash
+			with the Phantom Troupe. Kurapika kills two members and seals their leader Chrollo Lucilfer's powers but is
+			forced to abandon further pursuit to rescue Gon and Killua.
+		</p>
+		<p>
+			Gon and Killua later play Greed Island, a Nen-infused video game created by Ging, seeking clues to his
+			whereabouts.[15] Under the tutelage of Biscuit Krueger, they refine their Nen abilities. Killua briefly
+			departs to retake and pass the Hunter Exam before rejoining Gon to complete the game, earning artifacts that
+			lead them to Ging. Instead, they reunite with Kite, who is researching a man-eating Chimera Ant queen in the
+			Neo-Green Life (N.G.L.) Autonomous Region. The queen's offspring, having learned Nen by consuming Hunters,
+			overthrow the nearby Republic of East Gorteau (東ゴルトー共和国, Higashi Gorutō Kyouwakoku). Despite the efforts of
+			the Hunter Association, including its president Netero, the Ant King Meruem proves formidable. Netero
+			ultimately defeats Meruem with a suicide bomb, while Gon, driven by vengeance, overexerts his Nen to kill
+			the Ant Neferpitou, leaving him critically injured.
+		</p>
+		<p>
+			After the Chimera Ant crisis, the Hunter Association's Zodiacs, including Ging, seek a new chairman. Killua
+			retrieves his sister Alluka to heal Gon, overcoming his family's resistance and Illumi's interference. Gon
+			eventually meets Ging, who reveals the purpose of his journey.
+		</p>
+		<p>
+			Later, Netero's son Beyond organizes an expedition to the forbidden Dark Continent (暗黒大陸, Ankoku Tairiku),
+			backed by the Kingdom of Kakin. The world's major powers permit the expedition under strict oversight, with
+			the Zodiacs supervising Beyond. Kurapika and Leorio join the Zodiacs, replacing Ging and Pariston Hill, who
+			form independent teams. Meanwhile, Chrollo regains his Nen and battles Hisoka, who, after being revived,
+			begins assassinating Phantom Troupe members aboard Kakin's ship. Kurapika, aboard as bodyguard to Prince
+			Wobble, seeks to reclaim the Kurta clan's stolen scarlet eyes from Prince Tserriednich.
+		</p>
+	</section>
+	<footer>
+		<h1>
+				Vou escrever alguma coisa aqui pra não ficar sem nada, mas não realmente algo aqui :)
+		</h1>
+	</footer>
 </body>
 
 </html>

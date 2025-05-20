@@ -10,7 +10,7 @@ body {
 header {
     color: #F8FAFC;
     background-color: #101214;
-    padding: 30px;
+    padding: 60px;
     text-align: center;
 }
 
@@ -29,13 +29,20 @@ nav a {
     padding: 10px 15px;
 }
 
-nav a.right {
-    float: right;
-}
-
 nav a:hover {
     color: black;
     background-color: #F8FAFC;
+}
+
+nav button {
+	color: #F8FAFC;
+	background-color: #2C333A;
+	border-style: none;
+}
+
+nav button:hover {
+	color: #2C333A;
+	background-color: #F8FAFC;
 }
 
 aside {
