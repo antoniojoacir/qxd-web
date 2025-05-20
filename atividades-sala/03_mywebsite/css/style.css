@@ -4,7 +4,7 @@
 }
 
 body {
-     margin: 0;
+    margin: 0;
 }
 
 .header {
@@ -19,9 +19,10 @@ body {
     overflow: hidden;
 }
 .navbar a { 
-    color: #ddd;   
-    padding: 0 10px;
+    color: #ddd;
+    padding: 10px 20px;    
     text-decoration: none;
+    text-align: center;
 }
 
 .navbar a:hover {
