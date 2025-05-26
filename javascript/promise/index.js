@@ -1,8 +1,10 @@
 const getPromiseAPI = (url) => {
   let promise = new Promise((RESOLVE, REJECT) => {
-    const num = 3;
-    if (num % 2 === 0) RESOLVE("OK: NUMERO PAR");
-    else REJECT("NOK: NUMERO IMPAR");
+    setTimeout(() => {
+      const num = 3;
+      if (num % 2 === 0) RESOLVE("OK: NUMERO PAR");
+      else REJECT("NOK: NUMERO IMPAR");
+    }, 3000);
   });
   return promise;
 };
