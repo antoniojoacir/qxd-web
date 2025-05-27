@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .myimage {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function isValid(value) {
+            if(value < 1 ) {
+                return 1
+            }
+            if(value > 100) {
+                return 100
+            }
+            return value
+        }
+
+        let index = 0;
+        function getPokemonForwad() {
+            let link = document.getElementById("image")
+            index = isValid(index + 1)
+            link.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index}.svg`
+        }
+        function getPokemonBack() {
+            let link = document.getElementById("image")
+            index = isValid(index - 1)
+            link.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${index}.svg`
+        }
+    </script>
+    <div class="myimage">
+        <img id="image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="">
+    </div>
+
+    <div>
+        <button onclick="getPokemonBack()">Voltar -1</button>
+        <button onclick="getPokemonForwad()">Adiantar +1</button>
+    </div>
+</body>
+</html>

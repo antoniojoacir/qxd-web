@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 40px;
+
+        }
+
+        header h3 {
+            color: #BFBFBF;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        nav {
+            background-color: #2E2E2E;
+            margin: 0;
+            padding: 0;
+            flex: 30%;
+        }
+
+        nav a {
+            color: #BFBFBF;
+            display: block;
+            overflow: hidden;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #2E2E2E;
+            background-color: #BFBFBF;
+        }
+        section {
+            flex: 70%;
+            background-color: #7D7D7D;
+            padding: 15px;
+        }
+        section h4,
+        section p {
+            color: #BFBFBF;
+            margin-left: 10px;
+            text-align: justify;
+        }
+        footer {
+            background-color: #4B4B4B;
+            padding: 20px;
+        }
+
+        footer h4,
+        footer p {
+            margin: 0;
+            color: #BFBFBF;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            .flex-container {
+                display: block;
+            }
+            nav {
+                display: flex;
+            }
+
+            nav a {
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>
+            Desenvolvimento de Software WEB
+        </h3>
+    </header>
+    <div class="flex-container">
+    <nav>
+        <a href="">link 1</a><a href="">link 2</a><a href="">link 3</a><a href="">link 4</a>
+    </nav>
+    <section>
+        <h4>
+            Introdução ao HTML
+        </h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam magni quibusdam, distinctio sint accusantium iusto officia ut voluptas similique, natus mollitia aut corrupti repellat perferendis atque culpa autem amet minus.
+        </p>
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/2014ForestHillsDrive.jpg" alt="">
+            <figcaption>2014 Forest Hills Drive</figcaption>
+        </figure>
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A numquam delectus obcaecati natus explicabo, id eum, maiores dolorum architecto blanditiis ad accusantium? Id eius velit voluptate atque laboriosam illo sint?   
+        </p>
+    </section>
+    </div>
+    <footer>
+        <h4>
+            <b>
+                antoniojoacir@alu.ufc.br
+            </b>
+        </h4>
+        <p>
+            2025.1
+        </p>
+        <p>
+            Todos os direitos reservados
+        </p>
+    </footer>
+</body>
+
+</html>
