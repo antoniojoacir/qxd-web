@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="pokemon-name">POKEMON NAME:</h1>
+    <img id="pokemon-img" src="" alt="" />
+    <img src="" alt="" id="pokemon-img-hd" />
+    <div>
+      <button onclick="carregarPokemon(157)">CLICK!</button>
+    </div>
+    <script>
+      const upperCase = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      };
+
+      const carregarPokemon = async (id) => {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+
+        const json = await res.json();
+
+        const name = document.getElementById("pokemon-name");
+        const img = document.getElementById("pokemon-img");
+        const img_hd = document.getElementById("pokemon-img-hd");
+
+        name.innerHTML = `POKEMON NAME: ${upperCase(json.name)}`;
+        img.src = json.sprites.front_shiny;
+        img_hd.src = json.sprites.other.dream_world.front_default;
+      };
+    </script>
+  </body>
+</html>

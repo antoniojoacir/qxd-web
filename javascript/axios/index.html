@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="pokemon-name">POKEMON NAME:</h1>
+    <img id="pokemon-img" src="" alt="" />
+    <img src="" alt="" id="pokemon-img-hd" />
+    <div>
+      <button onclick="carregarPokemon(448)">CLICK!</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const upperCase = (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      };
+
+      const carregarPokemon = async (id) => {
+          const name = document.getElementById("pokemon-name");
+          const img = document.getElementById("pokemon-img");
+          const img_hd = document.getElementById("pokemon-img-hd");
+
+        
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(
+            (res) => {
+                const poke = res.data
+                name.innerHTML = `POKEMON NAME: ${upperCase(poke.name)}`;
+                img.src = poke.sprites.front_shiny;
+                img_hd.src = poke.sprites.other.dream_world.front_default;
+            }
+        )
+      };
+    </script>
+  </body>
+</html>

@@ -13,6 +13,10 @@
         <button onclick="carregarPokemon(15)"> CLICK! </button>
     </div>
     <script>
+        const upperCase = (str) => {
+            return str.charAt(0).toUpperCase() + str.slice(1)
+        }
+
         const carregarPokemon = (id) => {
             fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(
@@ -26,7 +30,7 @@
                     const img = document.getElementById("pokemon-img")
                     const img_hd = document.getElementById("pokemon-img-hd")
 
-                    name.innerHTML = `POKEMON NAME: ${res.name.charAt(0).toUpperCase() + res.name.slice(1)}`
+                    name.innerHTML = `POKEMON NAME: ${upperCase(res.name)}`
                     img.src = res.sprites.front_shiny
                     img_hd.src = res.sprites.other.dream_world.front_default
                 }
