@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="professor-img" src="" alt="" />
+    <h1 id="professor-name">PROFESSOR</h1>
+    <div>
+      <button onclick="getTeacher()">CLICK!</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      const getTeacher = async () => {
+        const res = await axios.get("http://localhost:3000/teachers/list");
+
+        for (teacher of res) {
+          let div = document.createElement('div')
+
+          div.innerHTML = `
+            <h1>${teacher.name}</h1>
+            <img src=${teacher.img}/>
+          `
+        }
+      };
+    </script>
+  </body>
+</html>
