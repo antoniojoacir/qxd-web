@@ -6,8 +6,6 @@ class TeacherModel {
         this.role = role
         this.img = img
     }
-
-
 }
 
 module.exports = TeacherModel

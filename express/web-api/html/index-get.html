@@ -6,8 +6,9 @@
     <title>Document</title>
   </head>
   <body>
-    <img id="professor-img" src="" alt="" />
-    <h1 id="professor-name">PROFESSOR</h1>
+     <div id="teachers">
+        P R O F E S S O R E S
+    </div>
     <div>
       <button onclick="getTeacher()">CLICK!</button>
     </div>
@@ -15,14 +16,21 @@
     <script>
       const getTeacher = async () => {
         const res = await axios.get("http://localhost:3000/teachers/list");
-
-        for (teacher of res) {
-          let div = document.createElement('div')
-
-          div.innerHTML = `
+        const json = await res.data
+        
+        console.log(json)
+        let div = document.getElementById('teachers')
+        div.innerHTML = " "
+        
+        for (teacher of json) {
+          let newDiv = document.createElement('div')
+          newDiv.innerHTML = `
             <h1>${teacher.name}</h1>
+            <h2>${teacher.role}</h2>
             <img src=${teacher.img}/>
-          `
+            <a href='./index-put.html?id=${teacher.id}'>EDITAR</a>
+          ` 
+          div.appendChild(newDiv) 
         }
       };
     </script>
