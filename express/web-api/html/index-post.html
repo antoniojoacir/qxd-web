@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
+
 <body>
-    <h1>Inserir Professor</h1>
-    <form onsubmit="createTeacher(event)">
-        <label for="name">Nome: </label>
-        <input type="text" name="name" id="name" required/> <br>
-        <label for="role">Role: </label>
-        <input type="text" name="role" id="role" required/> <br>
-        <label for="img">Img: </label>
-        <input type="text" name="img" id="img" required/> <br>
+	<h1>Novo Professor</h1>
+	<form onsubmit="createTeacher(event)">
+		<label for="name">Nome: </label>
+		<input type="text" name="name" id="name" required /> <br>
 
-        <button type="submit">CLICK</button>
-    </form>
+		<label for="role">Role: </label>
+		<input type="text" name="role" id="role" required /> <br>
 
-    <script>    
+		<label for="img">Img: </label>
+		<input type="text" name="img" id="img" required /> <br>
 
-         const createTeacher = async (event) => {
-            event.preventDefault()
-            
-            const name = document.getElementById("name").value
-            const role = document.getElementById("role").value
-            const img = document.getElementById("img").value
-            
-            const novoProfessor = {name, role, img}
-            
-            const response = await fetch(
-                "http://localhost:3000/teachers/create"
-                ,
-                {
-                    method: "POST",
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify(novoProfessor)
-                }
-            )
-            const json = await response.json()
-            console.log(json)
+		<button type="submit">CLICK</button>
+	</form>
 
-        }
-    </script>
+	<script>
+
+		const createTeacher = async (event) => {
+			event.preventDefault()
+
+			const name = document.getElementById("name").value
+			const role = document.getElementById("role").value
+			const img = document.getElementById("img").value
+
+			const newTeacher = {name, role, img}
+
+			const res = await fetch(
+				"http://localhost:3000/teachers/create"
+				,
+				{
+					method: "POST",
+					headers: {"Content-Type": "application/json"},
+					body: JSON.stringify(newTeacher)
+				}
+			)
+			const json = await res.json()
+		}
+	</script>
 </body>
+
 </html>

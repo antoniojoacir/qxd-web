@@ -6,62 +6,56 @@
 </head>
 
 <body>
-    <h1>Editar Professor</h1>
+	<h1>Editar Professor</h1>
 
-    <form onsubmit="editarProfessor(event)">
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" required /> <br />
+	<form onsubmit="editTeacher(event)">
+		<label for="name">Name: </label>
+		<input type="text" id="name" name="name" required /> <br />
 
-        <label for="titulacao">Role: </label>
-        <input type="text" id="role" name="role" required /> <br />
+		<label for="role">Role: </label>
+		<input type="text" id="role" name="role" required /> <br />
 
-        <label for="img">Imagem: </label>
-        <input type="text" id="img" name="img" required /> <br />
+		<label for="img">Imagem: </label>
+		<input type="text" id="img" name="img" required /> <br />
 
-        <button type="submit">ATUALIZAR</button>
-    </form>
+		<button type="submit">ATUALIZAR</button>
+	</form>
 
-    <script>
+	<script>
+		const params = new URLSearchParams(document.location.search.substring(1))
+		const id = params.get("id")
 
-        let params = new URLSearchParams(document.location.search.substring(1))
-        let id = params.get("id")
+		const editTeacher = async (event) => {
+			event.preventDefault()
 
-        //console.log(id)
+			const name = document.getElementById('name').value
+			const role = document.getElementById('role').value
+			const img = document.getElementById('img').value
 
-        function getProfessor() {
-            fetch(`http://localhost:3000/teachers/retrive/${id}`)
-                .then(response => response.json())
-                .then(json => {
-                    document.getElementById("name").value = json.name
-                    document.getElementById("role").value = json.role
-                    document.getElementById("img").value = json.img
-                })
-                .catch(error => console.log(error))
-        }
+			const teacher = {name, role, img}
 
-        getProfessor()
+			const res = await fetch(
+				`http://localhost:3000/teachers/edit/${id}`,
+				{
+					method: "PUT",
+					headers: {"Content-Type": "application/json"},
+					body: JSON.stringify(teacher)
+				}
+			)
+			const json = await res.json()
+		}
 
-        async function editarProfessor(event) {
-            event.preventDefault()
-            const name = document.getElementById("name").value = json.name
-            const role = document.getElementById("role").value = json.role
-            const img = document.getElementById("img").value = json.img
-
-            const teacherMod = { name, role, img }
-            fetch(
-                `http://localhost:3000/teachers/edit/${id}`,
-                {
-                    method: "PUT",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(teacherMod)
-                }
-            )
-                .then(response => response.json())
-                .then(json => console.log(json))
-                .catch(err => console.log(err))
-        }
-
-    </script>
+		const retriveTeacher = async (event) => {
+			await fetch(`http://localhost:3000/teachers/retrive/${id}`)
+				.then(res => res.json())
+				.then(json => {
+					document.getElementById("name").value = json.name
+					document.getElementById("role").value = json.role
+					document.getElementById("img").value = json.img
+				})
+				.catch(err => console.log(err))
+		}
+	</script>
 </body>
 
 </html>

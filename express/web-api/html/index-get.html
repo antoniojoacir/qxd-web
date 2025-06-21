@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-     <div id="teachers">
-        P R O F E S S O R E S
-    </div>
-    <div>
-      <button onclick="getTeacher()">CLICK!</button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      const getTeacher = async () => {
-        const res = await axios.get("http://localhost:3000/teachers/list");
-        const json = await res.data
-        
-        console.log(json)
-        let div = document.getElementById('teachers')
-        div.innerHTML = " "
-        
-        for (teacher of json) {
-          let newDiv = document.createElement('div')
-          newDiv.innerHTML = `
-            <h1>${teacher.name}</h1>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+</head>
+
+<body>
+	<div>
+		<button onclick="getTeacher()">CLICK!</button>
+	</div>
+	<div id="teachers">
+		P R O F E S S O R E S
+	</div>
+
+	<script>
+		const getTeacher = async () => {
+			const res = await fetch("http://localhost:3000/teachers/list");
+			const json = await res.json()
+
+			const div = document.getElementById('teachers')
+			div.innerHTML = " "
+
+			for (teacher of json) {
+				const newDiv = document.createElement('div')
+				newDiv.innerHTML = `
+						<h1>[${teacher.id}] - ${teacher.name}</h1>
             <h2>${teacher.role}</h2>
-            <img src=${teacher.img}/>
+						<img src='${teacher.img}'/> <br/>
             <a href='./index-put.html?id=${teacher.id}'>EDITAR</a>
-          ` 
-          div.appendChild(newDiv) 
-        }
-      };
-    </script>
-  </body>
+						<button onclick='deleteTeacher(${teacher.id})'>DELETE</button>
+          `
+				div.appendChild(newDiv)
+			}
+		}
+		const deleteTeacher = async (id) => {
+			await fetch(`http://localhost:3000/teachers/delete/${id}`,
+				{
+					method: "DELETE"
+				})
+				.then(res => res.json())
+				.then(json => console.log(json))
+		}
+	</script>
+</body>
+
 </html>
