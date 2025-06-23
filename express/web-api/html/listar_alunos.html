@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .students {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estudantes</h1>
+    <div id="students">
+
+    </div>
+    <button onclick="getStudents()">CLICK</button>
+    <script>
+        const getStudents = async () => {
+            const response = await fetch("http://localhost:3000/students/list")
+            const json = await response.json()
+
+            const div = document.getElementById('students')
+            div.innerHTML = ""
+
+            const table = document.createElement('table')
+            table.innerHTML = ""
+
+            table.innerHTML = `
+                <tr>
+                    <th>
+                        Nome
+                        </th>
+                        <th>
+                        Curso
+                        </th>
+                        <th>
+                        Ira
+                        </th>
+                    </tr>
+            `
+
+            for (student of json) {
+                const li = table.insertRow()
+                const name = li.insertCell()
+                name.textContent = student.name
+                const curse = li.insertCell()
+                curse.textContent = student.curse
+                const ira = li.insertCell()
+                ira.textContent = student.ira
+                table.appendChild(li)
+            }
+            div.appendChild(table)
+
+            for (let i = 0; i < table.rows.length; i++) {
+                const content = table.rows[i].cells[2].innerText
+                console.log(content)
+            }
+        }
+    </script>
+</body>
+
+</html>

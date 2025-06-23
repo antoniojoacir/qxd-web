@@ -1,5 +1,5 @@
 const TeacherModel = require("../models/teacher.model");
-const teachers = require("../data/teacher")
+const teachers = require("../data/teachers")
 
 let id = 2
 
