@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body onload="retriveStudent()">
+	<h3>EDITAR ESTUDANTES</h3>
+	<form onsubmit="editStudent(event)">
+		<label for="name">NOME: </label>
+		<input type="text" id="name" name="name" required /> <br />
+
+		<label for="curse">CURSE: </label>
+		<input type="text" id="curse" name="curse" required /> <br />
+
+		<label for="ira">IRA: </label>
+		<input type="text" id="ira" name="ira" required /> <br />
+
+		<button type="submit">ATUALIZAR</button> <button onclick="window.location.href='./index-get.html'">BACK</button>
+
+	</form>
+
+	<script src="../../scripts/index.js">
+	</script>
+</body>
+
+</html>

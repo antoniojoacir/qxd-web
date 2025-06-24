@@ -2,29 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
 
 <body>
-    <h3>CRIAR ALUNO</h3>
-    <form onsubmit="createStudent(event)">
-        <label for="name">NOME: </label>
-        <input type="text" name="name" id="name" required/> <br>
+	<h3>CRIAR ALUNO</h3>
+	<form onsubmit="createStudent(event)">
+		<label for="name">NOME: </label>
+		<input type="text" name="name" id="name" required /> <br>
 
-        <label for="curse">CURSO: </label>
-        <input type="text" name="curse" id="curse" required/> <br>
+		<label for="curse">CURSO: </label>
+		<input type="text" name="curse" id="curse" required /> <br>
 
-        <label for="ira">IRA: </label>
-        <input type="text" name="ira" id="ira" required/> <br>
+		<label for="ira">IRA: </label>
+		<input type="text" name="ira" id="ira" required /> <br>
 
-        <button type="submit">CLICK</button> <button onclick="window.location.href='./index-get.html'">BACK</button>
-    </form>
+		<button type="submit">CRIAR</button>
+		<button type="button" onclick="window.location.href='./index-get.html'">VOLTAR</button>
+	</form>
 
-    <script src="../../scripts/index.js">
-        
-    </script>
+
+	<script src="../../scripts/index.js">
+
+	</script>
 </body>
 
 </html>
