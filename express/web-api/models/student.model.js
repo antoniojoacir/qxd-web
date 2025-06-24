@@ -1,6 +1,6 @@
 class StudentModel {
 
-    constructor() {
+    constructor(id, name, curse, ira) {
         this.id = id
         this.name = name
         this.curse = curse

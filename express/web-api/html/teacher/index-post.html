@@ -34,8 +34,7 @@
 			const newTeacher = {name, role, img}
 
 			const res = await fetch(
-				"http://localhost:3000/teachers/create"
-				,
+				"http://localhost:3000/teachers/create",
 				{
 					method: "POST",
 					headers: {"Content-Type": "application/json"},

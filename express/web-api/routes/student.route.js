@@ -7,4 +7,9 @@ router.get('/list', (request, response) => {
     response.json(StudentService.list())
 })
 
+router.post('/create', (request, response) => {
+    const student = StudentService.create(request.body)
+    response.json(student)
+})
+
 module.exports = router
