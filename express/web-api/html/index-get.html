@@ -26,20 +26,20 @@
 			for (teacher of json) {
 				const newDiv = document.createElement('div')
 				newDiv.innerHTML = `
-						<h1>[${teacher.id}] - ${teacher.name}</h1>
-            <h2>${teacher.role}</h2>
-						<img src='${teacher.img}'/> <br/>
-            <a href='./index-put.html?id=${teacher.id}'>EDITAR</a>
-						<button onclick='deleteTeacher(${teacher.id})'>DELETE</button>
-          `
+					<h1>[${teacher.id}] - ${teacher.name}</h1>
+            		<h2>${teacher.role}</h2>
+					<img src='${teacher.img}'/> <br/>
+            		<a href='./index-put.html?id=${teacher.id}'>EDITAR</a>
+					<button onclick='deleteTeacher(${teacher.id})'>DELETE<button>
+        		`
 				div.appendChild(newDiv)
 			}
 		}
 		const deleteTeacher = async (id) => {
-			await fetch(`http://localhost:3000/teachers/delete/${id}`,
-				{
-					method: "DELETE"
-				})
+			await fetch(
+				`http://localhost:3000/teachers/delete/${id}`,
+				{ method: "DELETE" }
+			)
 				.then(res => res.json())
 				.then(json => console.log(json))
 		}
