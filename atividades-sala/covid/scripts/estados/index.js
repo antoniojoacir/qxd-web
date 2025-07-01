@@ -58,7 +58,6 @@ const getEstados = async () => {
         }
     });
 
-
-
+    
     mydiv.appendChild(media)
 }
