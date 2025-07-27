@@ -1,0 +1,84 @@
+:root {
+	--bg-dark: hsl(206 57% 90%);
+	--bg: hsl(206 100% 95%);
+	--bg-light: hsl(206 100% 100%);
+	--text: hsl(210 100% 5%);
+	--text-muted: hsl(205 36% 28%);
+	--highlight: hsl(205 100% 100%);
+	--border: hsl(205 21% 50%);
+	--border-muted: hsl(205 29% 62%);
+	--primary: hsl(199 100% 20%);
+	--secondary: hsl(33 100% 20%);
+	--danger: hsl(9 21% 41%);
+	--warning: hsl(52 23% 34%);
+	--success: hsl(147 19% 36%);
+	--info: hsl(217 22% 41%);
+}
+
+.dark {
+	--bg-dark: hsl(215 100% 2%);
+	--bg: hsl(207 77% 5%);
+	--bg-light: hsl(205 49% 8%);
+	--text: hsl(205 100% 95%);
+	--text-muted: hsl(205 37% 70%);
+	--highlight: hsl(205 27% 39%);
+	--border: hsl(205 36% 28%);
+	--border-muted: hsl(204 56% 17%);
+	--primary: hsl(204 74% 69%);
+	--secondary: hsl(27 65% 66%);
+	--danger: hsl(9 26% 64%);
+	--warning: hsl(52 19% 57%);
+	--success: hsl(146 17% 59%);
+	--info: hsl(217 28% 65%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: var(--bg-dark);
+	font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	color: var(--text);
+	padding: 20px;
+	text-align: center;
+}
+
+nav {
+	background-color: var(--text);
+	display: flex;
+}
+
+nav a {
+	color: var(--bg);
+	padding: 10px 10px;
+}
+
+nav a:hover {
+	background-color: var(--secondary);
+}
+
+section {
+	color: var(--text-muted);
+	background-color: var(--bg-light);
+	padding: 20px;
+}
+
+footer {
+	background-color: var(--text);
+	padding: 15px;
+}
+
+footer a svg {
+	display: flex;
+	color: var(--bg-dark);
+	align-items: center;
+}
