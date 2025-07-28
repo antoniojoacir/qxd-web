@@ -5,26 +5,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assents/css/style.css">
-	<title>Pinheiro</title>
+	<title>Login - Pinheiro</title>
 </head>
 
 <body>
-	<header>
-		<h1>Pinheiro Veiculos</h1>
-	</header>
-	<nav>
-		<a href="#">Home</a>
-		<a href="./pages/products.html">Products</a>
-		<a href="#">About</a>
-		<a href="#" id="toggle-theme" style="float:right;">Theme</a>
-	</nav>
-	<section>
-		<article>
-		</article>
-	</section>
-	<footer>
-	</footer>
-	<script src="assents/js/toggleTheme.js"></script>
+	<div class="login-container">
+		<form id="login-form">
+			<h1>Login</h1>
+			<div class="form-group">
+				<label for="username">Usuário</label>
+				<input type="text" id="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Senha</label>
+				<input type="password" id="password" required>
+			</div>
+			<button type="submit">Entrar</button>
+			<p id="error-message" class="error-message"></p>
+		</form>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="assents/js/login.js"></script>
 </body>
 
 </html>

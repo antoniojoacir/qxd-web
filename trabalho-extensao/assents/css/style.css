@@ -204,7 +204,7 @@ section {
 
 .details-button {
 	display: inline-block;
-	background-color: #007bff;
+	background-color: var(--primary);
 	color: white;
 	padding: 10px 15px;
 	margin-top: 15px;
@@ -215,7 +215,7 @@ section {
 }
 
 .details-button:hover {
-	background-color: #0056b3;
+	background-color: var(--secondary);
 }
 
 .back-link {
@@ -298,4 +298,62 @@ footer {
 	color: var(--bg-dark);
 	background-color: var(--text);
 	padding: 15px;
+}
+
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--bg);
+}
+
+#login-form {
+	background-color: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px var(--border-muted);
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+}
+
+#login-form button {
+	width: 100%;
+	padding: 12px;
+	background-color: var(--primary);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+	background-color: var(--secondary);
+}
+
+.error-message {
+	color: var(--danger);
+	margin-top: 15px;
+	height: 20px;
 }
