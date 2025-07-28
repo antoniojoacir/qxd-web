@@ -47,19 +47,60 @@ a {
 }
 
 header {
-	color: var(--text);
-	padding: 20px;
+	color: var(--bg-light);
+	height: 40vh;
+	max-height: 450px;
+	background-image: url("../images/veiculo-em-movimento.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
+}
+
+header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1;
+}
+
+header>* {
+	position: relative;
+	z-index: 2;
 }
 
 nav {
 	background-color: var(--text);
 	display: flex;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 }
 
 nav a {
 	color: var(--bg);
-	padding: 10px 10px;
+	font-weight: bold;
+	padding: 20px 10px;
+	display: inline-block;
+	transition: background-color 0.3s;
+}
+
+#toggle-theme {
+	margin-left: auto;
+}
+
+nav a:active {
+	background-color: var(--primary);
 }
 
 nav a:hover {
@@ -72,13 +113,189 @@ section {
 	padding: 20px;
 }
 
-footer {
-	background-color: var(--text);
+#main-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	padding: 30px;
+}
+
+.car-card {
+	background-color: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	box-shadow: 0 4px 8px var(--border-muted);
+	overflow: hidden;
+	flex-basis: calc(50% - 30px);
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	transition: transform 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out,
+		opacity 0.3s ease-in-out;
+}
+
+.card-top-text {
+	font-size: 0.8em;
+	color: var(--text-muted);
+	padding: 8px 0;
+	border-bottom: 1px solid var(--border-muted);
+}
+
+.image-container {
 	padding: 15px;
 }
 
-footer a svg {
+.car-card img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 2px solid var(--border-muted);
+}
+
+.card-content {
+	padding: 0 20px 20px 20px;
+}
+
+.card-top-text h2 {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin: 10px 0 10px 0;
+}
+
+.car-card p {
+	font-size: 0.9rem;
+	color: var(--text-muted);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.car-card:hover {
+	transform: scale(1.03);
+	box-shadow: 0 10px 30px var(--border-muted);
+	z-index: 10;
+}
+
+
+.details-button {
+	display: inline-block;
+	background-color: var(--primary);
+	color: white;
+	padding: 10px 15px;
+	margin-top: 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.details-button:hover {
+	background-color: var(--secondary);
+}
+
+.back-link {
+	color: white;
+	text-decoration: none;
+}
+
+
+.details-button {
+	display: inline-block;
+	background-color: #007bff;
+	color: white;
+	padding: 10px 15px;
+	margin-top: 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.details-button:hover {
+	background-color: #0056b3;
+}
+
+.back-link {
+	color: white;
+	text-decoration: none;
+}
+
+#details-container {
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px var(--border-muted);
+}
+
+.details-wrapper {
 	display: flex;
+	gap: 40px;
+	align-items: flex-start;
+}
+
+.details-img {
+	flex: 1;
+	max-width: 45%;
+}
+
+.details-img img {
+	width: 100%;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+}
+
+.details-info {
+	flex: 1.5;
+}
+
+.details-info h1 {
+	font-size: 2.5rem;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.details-info p {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	color: var(--text-muted);
+}
+
+.error-message {
+	color: red;
+	text-align: center;
+	font-weight: bold;
+}
+
+.instagram-button {
+	display: inline-block;
+	padding: 12px 25px;
+	margin-top: 20px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+
+	background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+	border: none;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.instagram-button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
 	color: var(--bg-dark);
-	align-items: center;
+	background-color: var(--text);
+	padding: 15px;
 }

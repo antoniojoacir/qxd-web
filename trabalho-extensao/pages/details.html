@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assents/css/style.css">
+	<title>Detalhes do Veículo</title>
+</head>
+
+<body onload="retriveCar()">
+	<header>
+		<a href="index.html" class="back-link">
+			<h1>Pinheiro</h1>
+		</a>
+	</header>
+	<nav>
+		<a href="../index.html">Home</a>
+		<a href="./products.html">Products</a>
+		<a href="#">About</a>
+		<a href="#" id="toggle-theme">Theme</a>
+	</nav>
+
+	<section>
+		<div id="details-container">
+			<p>Carregando detalhes do veículo...</p>
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="../assents/js/details.js" />
+</body>
+
+</html>
