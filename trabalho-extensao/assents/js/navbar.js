@@ -6,7 +6,7 @@ const navbar = () => {
 	nav.innerHTML = `
         <a href="./home.html">Home</a>
         <a href="./products.html">Carros</a>
-        <a href="#">Sobre</a>
+        <a href="./about.html">Sobre</a>
 
         ${userRole === "admin" ? `<a href="./create.html">Inserir</a>` : ""}
 

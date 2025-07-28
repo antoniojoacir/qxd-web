@@ -12,4 +12,9 @@ router.get("/retrive/:id", (request, response) => {
 	response.json(car);
 });
 
+router.post("/create", (request, response) => {
+	const newCar = CarService.create(request.body);
+	response.status(201).json(newCar);
+});
+
 module.exports = router;
