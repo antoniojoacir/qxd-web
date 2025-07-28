@@ -5,10 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../assents/css/style.css">
+
+	<script src="../assents/js/authGuard.js"></script>
+	<script src="../assents/js/applyTheme.js"></script>
+	<script src="../assents/js/navbar.js"></script>
+
 	<title>Detalhes do Veículo</title>
 </head>
 
-<body onload="navbar(), retriveCar()">
+<body onload="retriveCar()">
 	<header>
 		<a href="./home.html" class="back-link">
 			<h1>Pinheiro Veiculos</h1>
@@ -21,10 +26,12 @@
 			<p>Carregando detalhes do veículo...</p>
 		</div>
 	</section>
+	<footer>
+		<p>&copy; 2025 Pinheiro Veículos. Todos os direitos reservados.</p>
+	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="../assents/js/details.js"></script>
-	<script src="../assents/js/navbar.js"></script>
 </body>
 
 </html>
